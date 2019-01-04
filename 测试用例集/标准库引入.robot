@@ -4,7 +4,7 @@ Library    Collections
 
 *** Variables ***
 ${str7}   Aslin
-@{list7}    lily    lucy    rabbit
+@{list7}    lily    lucy    rabbit    house
 &{newDict}    mobile=mi    money=1599
   
 *** Test Cases ***
