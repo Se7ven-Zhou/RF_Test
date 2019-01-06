@@ -1,260 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1 (Python 3.6.7 on win32)" generated="20190105 00:36:51.354" rpa="false">
+<robot generator="Robot 3.1 (Python 3.6.7 on win32)" generated="20190106 13:02:20.785" rpa="false">
 <suite id="s1" name="RF test" source="D:\eclipse-workspace\RF_test">
 <suite id="s1-s1" name="测试用例集" source="D:\eclipse-workspace\RF_test\测试用例集">
-<suite id="s1-s1-s1" name="标准库引入" source="D:\eclipse-workspace\RF_test\测试用例集\标准库引入.robot">
-<test id="s1-s1-s1-t1" name="case1_print">
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
+<suite id="s1-s1-s1" name="控制流 IF" source="D:\eclipse-workspace\RF_test\测试用例集\控制流_IF.robot">
+<test id="s1-s1-s1-t1" name="case3_plus">
+<kw name="plus" library="math">
 <arguments>
-<arg>hello world</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.443" level="INFO">hello world</msg>
-<status status="PASS" starttime="20190105 00:36:51.443" endtime="20190105 00:36:51.444"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>seven</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.445" level="INFO">seven</msg>
-<status status="PASS" starttime="20190105 00:36:51.444" endtime="20190105 00:36:51.445"></status>
-</kw>
-<status status="PASS" starttime="20190105 00:36:51.441" endtime="20190105 00:36:51.445" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t2" name="case2_getTime">
-<kw name="Get Current Date" library="DateTime">
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<assign>
-<var>${time}</var>
-</assign>
-<msg timestamp="20190105 00:36:51.447" level="INFO">${time} = 2019-01-05 00:36:51.447</msg>
-<status status="PASS" starttime="20190105 00:36:51.446" endtime="20190105 00:36:51.447"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${time}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.448" level="INFO">2019-01-05 00:36:51.447</msg>
-<status status="PASS" starttime="20190105 00:36:51.447" endtime="20190105 00:36:51.448"></status>
-</kw>
-<status status="PASS" starttime="20190105 00:36:51.446" endtime="20190105 00:36:51.448" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t3" name="case3_createList">
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
-<arguments>
-<arg>CQ</arg>
-<arg>CD</arg>
-<arg>123</arg>
-</arguments>
-<assign>
-<var>@{list1}</var>
-</assign>
-<msg timestamp="20190105 00:36:51.450" level="INFO">@{list1} = [ CQ | CD | 123 ]</msg>
-<status status="PASS" starttime="20190105 00:36:51.450" endtime="20190105 00:36:51.450"></status>
-</kw>
-<kw name="Append To List" library="Collections">
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<arguments>
-<arg>${list1}</arg>
-<arg>BJ</arg>
-</arguments>
-<status status="PASS" starttime="20190105 00:36:51.451" endtime="20190105 00:36:51.451"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${list1}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.452" level="INFO">['CQ', 'CD', '123', 'BJ']</msg>
-<status status="PASS" starttime="20190105 00:36:51.451" endtime="20190105 00:36:51.452"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${list1[0]}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.453" level="INFO">CQ</msg>
-<status status="PASS" starttime="20190105 00:36:51.452" endtime="20190105 00:36:51.453"></status>
-</kw>
-<status status="PASS" starttime="20190105 00:36:51.449" endtime="20190105 00:36:51.453" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t4" name="case4_creatDict">
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<arguments>
-<arg>name=seven</arg>
-<arg>age=18</arg>
-</arguments>
-<assign>
-<var>&amp;{dict1}</var>
-</assign>
-<msg timestamp="20190105 00:36:51.457" level="INFO">&amp;{dict1} = { name=seven | age=18 }</msg>
-<status status="PASS" starttime="20190105 00:36:51.455" endtime="20190105 00:36:51.457"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${dict1}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.459" level="INFO">{'name': 'seven', 'age': '18'}</msg>
-<status status="PASS" starttime="20190105 00:36:51.458" endtime="20190105 00:36:51.459"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${dict1["name"]}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.460" level="INFO">seven</msg>
-<status status="PASS" starttime="20190105 00:36:51.460" endtime="20190105 00:36:51.460"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${dict1.age}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.461" level="INFO">18</msg>
-<status status="PASS" starttime="20190105 00:36:51.461" endtime="20190105 00:36:51.461"></status>
-</kw>
-<status status="PASS" starttime="20190105 00:36:51.454" endtime="20190105 00:36:51.462" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t5" name="case5 setVariable">
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>Manchester United</arg>
-</arguments>
-<assign>
-<var>${Team}</var>
-</assign>
-<msg timestamp="20190105 00:36:51.464" level="INFO">${Team} = Manchester United</msg>
-<status status="PASS" starttime="20190105 00:36:51.464" endtime="20190105 00:36:51.465"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${Team}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.465" level="INFO">Manchester United</msg>
-<status status="PASS" starttime="20190105 00:36:51.465" endtime="20190105 00:36:51.466"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${Team[1]}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.466" level="INFO">a</msg>
-<status status="PASS" starttime="20190105 00:36:51.466" endtime="20190105 00:36:51.467"></status>
-</kw>
-<status status="PASS" starttime="20190105 00:36:51.463" endtime="20190105 00:36:51.467" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t6" name="case6 changeItemValue">
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
-<arguments>
-<arg>aaa</arg>
-<arg>bbb</arg>
-<arg>ccc</arg>
-</arguments>
-<assign>
-<var>@{list2}</var>
-</assign>
-<msg timestamp="20190105 00:36:51.469" level="INFO">@{list2} = [ aaa | bbb | ccc ]</msg>
-<status status="PASS" starttime="20190105 00:36:51.468" endtime="20190105 00:36:51.469"></status>
-</kw>
-<kw name="Set List Value" library="Collections">
-<doc>Sets the value of ``list`` specified by ``index`` to the given ``value``.</doc>
-<arguments>
-<arg>${list2}</arg>
 <arg>1</arg>
-<arg>ddd</arg>
-</arguments>
-<status status="PASS" starttime="20190105 00:36:51.469" endtime="20190105 00:36:51.470"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${list2}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.470" level="INFO">['aaa', 'ddd', 'ccc']</msg>
-<status status="PASS" starttime="20190105 00:36:51.470" endtime="20190105 00:36:51.471"></status>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<arguments>
-<arg>SEX=FAMALE</arg>
+<arg>2</arg>
 </arguments>
 <assign>
-<var>&amp;{dict2}</var>
+<var>${a}</var>
 </assign>
-<msg timestamp="20190105 00:36:51.472" level="INFO">&amp;{dict2} = { SEX=FAMALE }</msg>
-<status status="PASS" starttime="20190105 00:36:51.471" endtime="20190105 00:36:51.472"></status>
-</kw>
-<kw name="Set To Dictionary" library="Collections">
-<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>${dict2}</arg>
-<arg>SEX</arg>
-<arg>MALE</arg>
+<arg>${Num1}+${Num2}</arg>
 </arguments>
-<status status="PASS" starttime="20190105 00:36:51.472" endtime="20190105 00:36:51.473"></status>
+<assign>
+<var>${Num3}</var>
+</assign>
+<msg timestamp="20190106 13:02:20.881" level="INFO">${Num3} = 3</msg>
+<status status="PASS" starttime="20190106 13:02:20.880" endtime="20190106 13:02:20.881"></status>
+</kw>
+<msg timestamp="20190106 13:02:20.882" level="INFO">${a} = 3</msg>
+<status status="PASS" starttime="20190106 13:02:20.879" endtime="20190106 13:02:20.882"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>${dict2}</arg>
+<arg>${a}</arg>
 </arguments>
-<msg timestamp="20190105 00:36:51.475" level="INFO">{'SEX': 'MALE'}</msg>
-<status status="PASS" starttime="20190105 00:36:51.474" endtime="20190105 00:36:51.476"></status>
+<msg timestamp="20190106 13:02:20.883" level="INFO">3</msg>
+<status status="PASS" starttime="20190106 13:02:20.883" endtime="20190106 13:02:20.884"></status>
 </kw>
-<status status="PASS" starttime="20190105 00:36:51.467" endtime="20190105 00:36:51.476" critical="yes"></status>
+<status status="PASS" starttime="20190106 13:02:20.878" endtime="20190106 13:02:20.884" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t7" name="case7_printVariable">
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${str7}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.479" level="INFO">Aslin</msg>
-<status status="PASS" starttime="20190105 00:36:51.478" endtime="20190105 00:36:51.479"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${list7}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.480" level="INFO">['lily', 'lucy', 'rabbit', 'house1']</msg>
-<status status="PASS" starttime="20190105 00:36:51.480" endtime="20190105 00:36:51.480"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${newDict}</arg>
-</arguments>
-<msg timestamp="20190105 00:36:51.481" level="INFO">{'mobile': 'mi', 'money': '1599'}</msg>
-<status status="PASS" starttime="20190105 00:36:51.481" endtime="20190105 00:36:51.481"></status>
-</kw>
-<status status="PASS" starttime="20190105 00:36:51.477" endtime="20190105 00:36:51.482" critical="yes"></status>
-</test>
-<status status="PASS" starttime="20190105 00:36:51.423" endtime="20190105 00:36:51.482"></status>
+<status status="PASS" starttime="20190106 13:02:20.861" endtime="20190106 13:02:20.885"></status>
 </suite>
-<status status="PASS" starttime="20190105 00:36:51.419" endtime="20190105 00:36:51.485"></status>
+<status status="PASS" starttime="20190106 13:02:20.858" endtime="20190106 13:02:20.888"></status>
 </suite>
-<status status="PASS" starttime="20190105 00:36:51.393" endtime="20190105 00:36:51.488"></status>
+<status status="PASS" starttime="20190106 13:02:20.831" endtime="20190106 13:02:20.890"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0">Critical Tests</stat>
-<stat pass="7" fail="0">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="7" fail="0" id="s1" name="RF test">RF test</stat>
-<stat pass="7" fail="0" id="s1-s1" name="测试用例集">RF test.测试用例集</stat>
-<stat pass="7" fail="0" id="s1-s1-s1" name="标准库引入">RF test.测试用例集.标准库引入</stat>
+<stat pass="1" fail="0" id="s1" name="RF test">RF test</stat>
+<stat pass="1" fail="0" id="s1-s1" name="测试用例集">RF test.测试用例集</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="控制流 IF">RF test.测试用例集.控制流 IF</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,6 +1,7 @@
 *** Settings ***
 Library    DateTime    
 Library    Collections
+Variables    ../Vars.py
 
 *** Variables ***
 ${str7}   Aslin
@@ -42,4 +43,9 @@ case6 changeItemValue
 case7_printVariable
     BuiltIn.Log    ${str7}
     BuiltIn.Log    ${list7}  
-    BuiltIn.Log    ${newDict}                 
+    BuiltIn.Log    ${newDict}
+    
+case8_printVars
+    BuiltIn.Log    ${brand[0]}
+    BuiltIn.Log    ${like}   
+    BuiltIn.Log    ${dict8["name"]}                          
