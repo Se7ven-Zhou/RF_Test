@@ -1,7 +1,8 @@
 *** Settings ***
 Resource    ../PageObject/login.robot
 Library    SeleniumLibrary
-Library    String    
+Library    String   
+Resource    ../TestDatas/loginDatas.robot 
 Test Setup    SeleniumLibrary.Open Browser    https://account.xiaomi.com    chrome
 Test Teardown    SeleniumLibrary.Close Browser
 
@@ -9,5 +10,8 @@ Test Teardown    SeleniumLibrary.Close Browser
 *** Test Cases ***
 Login
     [Tags]    smoke
-    login.Login_Success    13752852018    701777xmzj
-    BuiltIn.Sleep    5    
+    login.Login_Success    ${loginData.username}    ${loginData.password}
+    BuiltIn.Sleep    5
+    
+print
+    BuiltIn.Log    5    

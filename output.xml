@@ -1,87 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1rc1 (Python 3.6.4 on win32)" generated="20190107 16:17:23.691" rpa="false">
+<robot generator="Robot 3.1.1rc1 (Python 3.6.4 on win32)" generated="20190109 16:59:59.743" rpa="false">
 <suite id="s1" name="RF Test" source="D:\eclipse-workspace\RF_Test">
-<suite id="s1-s1" name="测试用例集" source="D:\eclipse-workspace\RF_Test\测试用例集">
-<suite id="s1-s1-s1" name="登录功能" source="D:\eclipse-workspace\RF_Test\测试用例集\登录功能.robot">
-<test id="s1-s1-s1-t1" name="Login">
+<suite id="s1-s1" name="TestSuits" source="D:\eclipse-workspace\RF_Test\TestSuits">
+<suite id="s1-s1-s1" name="loginFunction" source="D:\eclipse-workspace\RF_Test\TestSuits\loginFunction.robot">
+<test id="s1-s1-s1-t1" name="print">
 <kw name="Open Browser" library="SeleniumLibrary" type="setup">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>https://account.xiaomi.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20190107 16:17:23.913" level="INFO">Opening browser 'chrome' to base url 'https://account.xiaomi.com'.</msg>
-<status status="PASS" starttime="20190107 16:17:23.913" endtime="20190107 16:17:29.388"></status>
+<msg timestamp="20190109 16:59:59.954" level="INFO">Opening browser 'chrome' to base url 'https://account.xiaomi.com'.</msg>
+<status status="PASS" starttime="20190109 16:59:59.953" endtime="20190109 17:00:05.688"></status>
 </kw>
-<kw name="Login_Success" library="login">
-<arguments>
-<arg>13752852018</arg>
-<arg>701777xmzj</arg>
-</arguments>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<doc>Sets focus to element identified by ``locator``.</doc>
-<arguments>
-<arg>${username_input}</arg>
-</arguments>
-<status status="PASS" starttime="20190107 16:17:29.392" endtime="20190107 16:17:29.433"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${username_input}</arg>
-<arg>${account}</arg>
-</arguments>
-<msg timestamp="20190107 16:17:29.434" level="INFO">Typing text '13752852018' into text field '//input[@id="username"]'.</msg>
-<status status="PASS" starttime="20190107 16:17:29.434" endtime="20190107 16:17:29.536"></status>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<doc>Types the given password into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${password_input}</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20190107 16:17:29.536" level="INFO">Typing password into text field '//input[@id="pwd"]'.</msg>
-<status status="PASS" starttime="20190107 16:17:29.536" endtime="20190107 16:17:29.635"></status>
-</kw>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<doc>Sets focus to element identified by ``locator``.</doc>
-<arguments>
-<arg>${login_button}</arg>
-</arguments>
-<status status="PASS" starttime="20190107 16:17:29.636" endtime="20190107 16:17:29.663"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>${login_button}</arg>
-</arguments>
-<msg timestamp="20190107 16:17:29.663" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
-<status status="PASS" starttime="20190107 16:17:29.663" endtime="20190107 16:17:29.728"></status>
-</kw>
-<status status="PASS" starttime="20190107 16:17:29.390" endtime="20190107 16:17:29.728"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<msg timestamp="20190107 16:17:34.729" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20190107 16:17:29.728" endtime="20190107 16:17:34.730"></status>
+<msg timestamp="20190109 17:00:05.691" level="INFO">5</msg>
+<status status="PASS" starttime="20190109 17:00:05.690" endtime="20190109 17:00:05.691"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20190107 16:17:34.731" endtime="20190107 16:17:37.786"></status>
+<status status="PASS" starttime="20190109 17:00:05.692" endtime="20190109 17:00:08.745"></status>
 </kw>
-<tags>
-<tag>smoke</tag>
-</tags>
-<status status="PASS" starttime="20190107 16:17:23.911" endtime="20190107 16:17:37.788" critical="yes"></status>
+<status status="PASS" starttime="20190109 16:59:59.951" endtime="20190109 17:00:08.746" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190107 16:17:23.776" endtime="20190107 16:17:37.791"></status>
+<status status="PASS" starttime="20190109 16:59:59.800" endtime="20190109 17:00:08.749"></status>
 </suite>
-<status status="PASS" starttime="20190107 16:17:23.774" endtime="20190107 16:17:37.800"></status>
+<status status="PASS" starttime="20190109 16:59:59.798" endtime="20190109 17:00:08.756"></status>
 </suite>
-<status status="PASS" starttime="20190107 16:17:23.750" endtime="20190107 16:17:37.807"></status>
+<status status="PASS" starttime="20190109 16:59:59.774" endtime="20190109 17:00:08.762"></status>
 </suite>
 <statistics>
 <total>
@@ -89,12 +39,11 @@
 <stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">smoke</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="RF Test">RF Test</stat>
-<stat pass="1" fail="0" id="s1-s1" name="测试用例集">RF Test.测试用例集</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="登录功能">RF Test.测试用例集.登录功能</stat>
+<stat pass="1" fail="0" id="s1-s1" name="TestSuits">RF Test.TestSuits</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="loginFunction">RF Test.TestSuits.loginFunction</stat>
 </suite>
 </statistics>
 <errors>
