@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1rc1 (Python 3.6.4 on win32)" generated="20190109 16:59:59.743" rpa="false">
+<robot generator="Robot 3.1.1rc1 (Python 3.6.4 on win32)" generated="20190109 16:59:54.586" rpa="false">
 <suite id="s1" name="RF Test" source="D:\eclipse-workspace\RF_Test">
 <suite id="s1-s1" name="TestSuits" source="D:\eclipse-workspace\RF_Test\TestSuits">
 <suite id="s1-s1-s1" name="loginFunction" source="D:\eclipse-workspace\RF_Test\TestSuits\loginFunction.robot">
