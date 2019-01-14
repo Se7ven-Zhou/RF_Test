@@ -3,6 +3,7 @@
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python36/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="mathMethod" path="RF_Test/Common"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

@@ -1,11 +1,13 @@
 *** Settings ***
 Resource    ../PageObject/login.robot
+Library    mathMethod     
 Library    SeleniumLibrary
 Library    String
 Library    DateTime    
 Resource    ../TestDatas/loginDatas.robot 
-Test Setup    SeleniumLibrary.Open Browser    https://account.xiaomi.com    chrome
-Test Teardown    SeleniumLibrary.Close Browser
+
+# Test Setup    SeleniumLibrary.Open Browser    https://account.xiaomi.com    chrome
+# Test Teardown    SeleniumLibrary.Close Browser
 
 
 *** Test Cases ***
@@ -15,5 +17,8 @@ Login
     BuiltIn.Sleep    5
     
 print
-    BuiltIn.Log    5
-    ${time}    DateTime.Get Current Date        
+    ${time}    DateTime.Get Current Date
+    BuiltIn.Log    ${time}    
+    ${result}    mathMethod.Sub    4    1
+    BuiltIn.Log    ${result}    
+           
