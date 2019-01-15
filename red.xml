@@ -4,6 +4,8 @@
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python36/Lib/site-packages"/>
     <referencedLibrary type="PYTHON" name="mathMethod" path="RF_Test/Common"/>
+    <referencedLibrary type="PYTHON" name="ExcelLib" path="RF_Test/Public"/>
+    <referencedLibrary type="PYTHON" name="mysqlLib" path="RF_Test/Public"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

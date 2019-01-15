@@ -1,6 +1,8 @@
 *** Settings ***
 Resource    ../PageObject/login.robot
-Library    mathMethod     
+Library    mathMethod    
+Library    ../Public/ExcelLib.py
+Library    ../Public/mysqlLib.py               
 Library    SeleniumLibrary
 Library    String
 Library    DateTime    
@@ -20,5 +22,11 @@ print
     ${time}    DateTime.Get Current Date
     BuiltIn.Log    ${time}    
     ${result}    mathMethod.Sub    4    1
-    BuiltIn.Log    ${result}    
+    BuiltIn.Log    ${result}
+    ${Mul}    ExcelLib.Mul    2    3
+    BuiltIn.Log    ${Mul}
+    mysqlLib.Mysql Name    I am mysqlName
+    ${sub}    mathMethod.Sub    5    3
+    BuiltIn.Log    ${sub}    
+    
            
