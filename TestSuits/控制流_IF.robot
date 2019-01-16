@@ -1,13 +1,13 @@
 *** Settings ***
 Library    Collections    
-Resource    ../Common/math.robot
+Resource   ../PageObject/math.robot
 
 *** Keywords ***
 printDemo
     BuiltIn.Log    ***
     
 WrongKeyword
-    a=1        
+    BuiltIn.Log    11            
     
 
 *** Variables ***
@@ -28,8 +28,7 @@ case2_if_judge
     ...    ELSE    BuiltIn.Log    Error!
 
 case3_plus
-    ${a}    plus    1    2
-    BuiltIn.Log    ${a}   
+    BuiltIn.Log    11       
 
 case4_setVarIf
     ${var1}    BuiltIn.Set Variable If    0>1    "right"    "Wrong"
